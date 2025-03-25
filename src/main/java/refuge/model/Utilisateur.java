@@ -1,6 +1,16 @@
 package refuge.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="utilisateur")
 public abstract class Utilisateur{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer id;
 	protected String login;
 	protected String password;
@@ -8,6 +18,8 @@ public abstract class Utilisateur{
 	protected String firstName;
 	protected String email;
 	protected String phoneNumber;
+	
+	public Utilisateur() {}
 	
 	public Utilisateur(Integer id, String login, String password, String lastName, String firstName, String email,
 			String phoneNumber) {

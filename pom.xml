@@ -10,6 +10,11 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.26</version>
     </dependency>
+    <dependency>
+    	<groupId>formation-sopra</groupId>
+    	<artifactId>Eshop</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 	
   <properties>

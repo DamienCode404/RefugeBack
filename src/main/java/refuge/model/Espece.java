@@ -1,8 +1,20 @@
 package refuge.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="espece")
 public class Espece{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String libelle;
+	
+	public Espece() {}
 	
 	public Espece(Integer id, String libelle) {
 		this.id = id;

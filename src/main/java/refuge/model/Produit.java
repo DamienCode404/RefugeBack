@@ -1,11 +1,23 @@
 package refuge.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="produit")
 public abstract class Produit{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String libelle;
 	private String description;
 	private Double prix;
 	private Integer stock;
+	
+	public Produit() {}
 	
 	public Produit(Integer id, String libelle, String description, Double prix, Integer stock) {
 		this.id = id;

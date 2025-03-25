@@ -2,11 +2,23 @@ package refuge.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="achat")
 public class Achat{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private Integer qte;
 	private Double prix;
 	private LocalDate date;
+	
+	public Achat() {}
 	
 	public Achat(Integer id, Integer qte, Double prix, LocalDate date) {
 		this.id = id;

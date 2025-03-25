@@ -2,15 +2,26 @@ package refuge.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="animal")
 public class Animal{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nom;
 	private String race;
 	private LocalDate naissance;
 	private String description;
 	
-	public Animal(Integer id, String nom, String race, LocalDate naissance, String description) {
-		this.id = id;
+	public Animal() {}
+	
+	public Animal(String nom, String race, LocalDate naissance, String description) {
 		this.nom = nom;
 		this.race = race;
 		this.naissance = naissance;
