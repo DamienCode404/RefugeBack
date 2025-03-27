@@ -1,16 +1,20 @@
 package refuge.context;
 
-//import refuge.dao.DAOCompte;
-//import refuge.dao.DAOPatient;
-//import refuge.dao.DAOVisite;
+import refuge.DAO.DAOAchat;
+import refuge.DAO.DAOAnimal;
+import refuge.DAO.DAOEspece;
+import refuge.DAO.DAOProduit;
+import refuge.DAO.DAOUtilisateur;
 
 public class Singleton {
 
 	private static Singleton instance=null; 
 
-	//private DAOCompte daoCompte = new DAOCompte();
-	//private DAOPatient daoPatient = new DAOPatient();
-	//private DAOVisite daoVisite = new DAOVisite();
+	private DAOAchat daoAchat = new DAOAchat();
+	private DAOAnimal daoAnimal = new DAOAnimal();
+	private DAOEspece daoEspece = new DAOEspece();
+	private DAOProduit daoProduit = new DAOProduit();
+	private DAOUtilisateur daoUtilisateur = new DAOUtilisateur();
 
 
 
@@ -18,7 +22,7 @@ public class Singleton {
 
 
 
-	/*public static Singleton getInstance() {
+	public static Singleton getInstance() {
 		if(instance==null) 
 		{
 			instance=new Singleton();
@@ -28,44 +32,62 @@ public class Singleton {
 
 
 
-	public DAOCompte getDaoCompte() {
-		return daoCompte;
+	public DAOAchat getDaoAchat() {
+		return daoAchat;
 	}
 
 
 
-	public void setDaoCompte(DAOCompte daoCompte) {
-		this.daoCompte = daoCompte;
+	public void setDaoAchat(DAOAchat daoAchat) {
+		this.daoAchat = daoAchat;
 	}
 
 
 
-	public DAOPatient getDaoPatient() {
-		return daoPatient;
+	public DAOAnimal getDaoAnimal() {
+		return daoAnimal;
 	}
 
 
 
-	public void setDaoPatient(DAOPatient daoPatient) {
-		this.daoPatient = daoPatient;
+	public void setDaoAnimal(DAOAnimal daoAnimal) {
+		this.daoAnimal = daoAnimal;
 	}
 
 
 
-	public DAOVisite getDaoVisite() {
-		return daoVisite;
+	public DAOEspece getDaoEspece() {
+		return daoEspece;
 	}
 
 
 
-	public void setDaoVisite(DAOVisite daoVisite) {
-		this.daoVisite = daoVisite;
+	public void setDaoEspece(DAOEspece daoEspece) {
+		this.daoEspece = daoEspece;
 	}
 
 
 
-	public static void setInstance(Singleton instance) {
-		Singleton.instance = instance;
-	}*/
+	public DAOProduit getDaoProduit() {
+		return daoProduit;
+	}
+
+
+
+	public void setDaoProduit(DAOProduit daoProduit) {
+		this.daoProduit = daoProduit;
+	}
+
+
+
+	public DAOUtilisateur getDaoUtilisateur() {
+		return daoUtilisateur;
+	}
+
+
+
+	public void setDaoUtilisateur(DAOUtilisateur daoUtilisateur) {
+		this.daoUtilisateur = daoUtilisateur;
+	}
 
 }
