@@ -1,8 +1,8 @@
-package refuge.DAO;
+package refuge.dao;
 
 import java.util.List;
 
-public class IDAO<T,K> {
+public interface IDAO<T,K> {
 	public List<T> findAll();
 	public T findById(K id);
 	public T save(T obj);

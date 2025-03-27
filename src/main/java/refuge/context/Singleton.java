@@ -1,10 +1,10 @@
 package refuge.context;
 
-import refuge.DAO.DAOAchat;
-import refuge.DAO.DAOAnimal;
-import refuge.DAO.DAOEspece;
-import refuge.DAO.DAOProduit;
-import refuge.DAO.DAOUtilisateur;
+import refuge.dao.DAOAchat;
+import refuge.dao.DAOAnimal;
+import refuge.dao.DAOEspece;
+import refuge.dao.DAOProduit;
+import refuge.dao.DAOUtilisateur;
 
 public class Singleton {
 

@@ -1,4 +1,4 @@
-package refuge.DAO;
+package refuge.dao;
 
 import java.util.List;
 
