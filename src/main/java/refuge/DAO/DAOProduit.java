@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
-import eshop.context.Singleton;
+import refuge.context.Singleton;
 import refuge.model.Produit;
 
 public class DAOProduit implements IDAO<Produit, Integer> {

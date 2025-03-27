@@ -22,7 +22,6 @@ public class Singleton {
 	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("contextJPA");
 
 
-
 	private Singleton() {}
 
 
@@ -111,7 +110,4 @@ public class Singleton {
 	{
 		this.emf.close();
 	}
-	
-	
-
 }

@@ -77,7 +77,7 @@ public class DAOUtilisateur implements IDAO<Utilisateur, Integer> {
 	public List<Client> findAllClient() {
 		EntityManager em = Singleton.getInstance().getEmf().createEntityManager();
 
-		List<Client> clients = em.createQuery("FROM Worker").getResultList();
+		List<Client> clients = em.createQuery("FROM Client").getResultList();
 
 		em.close();
 		return clients;
