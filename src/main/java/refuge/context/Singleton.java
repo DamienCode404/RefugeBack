@@ -1,5 +1,8 @@
 package refuge.context;
 
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 import refuge.dao.DAOAchat;
 import refuge.dao.DAOAnimal;
 import refuge.dao.DAOEspece;
@@ -15,6 +18,8 @@ public class Singleton {
 	private DAOEspece daoEspece = new DAOEspece();
 	private DAOProduit daoProduit = new DAOProduit();
 	private DAOUtilisateur daoUtilisateur = new DAOUtilisateur();
+	
+	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("contextJPA");
 
 
 
@@ -89,5 +94,24 @@ public class Singleton {
 	public void setDaoUtilisateur(DAOUtilisateur daoUtilisateur) {
 		this.daoUtilisateur = daoUtilisateur;
 	}
+
+
+
+	public EntityManagerFactory getEmf() {
+		return emf;
+	}
+
+
+
+	public void setEmf(EntityManagerFactory emf) {
+		this.emf = emf;
+	}
+	
+	public void closeEmf() 
+	{
+		this.emf.close();
+	}
+	
+	
 
 }
