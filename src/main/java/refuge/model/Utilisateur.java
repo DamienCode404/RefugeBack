@@ -21,9 +21,7 @@ public abstract class Utilisateur{
 	
 	public Utilisateur() {}
 	
-	public Utilisateur(Integer id, String login, String password, String lastName, String firstName, String email,
-			String phoneNumber) {
-		this.id = id;
+	public Utilisateur(String login, String password, String lastName, String firstName, String email, String phoneNumber) {
 		this.login = login;
 		this.password = password;
 		this.lastName = lastName;

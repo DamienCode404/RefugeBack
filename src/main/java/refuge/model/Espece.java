@@ -16,8 +16,7 @@ public class Espece{
 	
 	public Espece() {}
 	
-	public Espece(Integer id, String libelle) {
-		this.id = id;
+	public Espece(String libelle) {
 		this.libelle = libelle;
 	}
 

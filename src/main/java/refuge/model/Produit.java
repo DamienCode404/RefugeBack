@@ -19,8 +19,7 @@ public abstract class Produit{
 	
 	public Produit() {}
 	
-	public Produit(Integer id, String libelle, String description, Double prix, Integer stock) {
-		this.id = id;
+	public Produit(String libelle, String description, Double prix, Integer stock) {
 		this.libelle = libelle;
 		this.description = description;
 		this.prix = prix;

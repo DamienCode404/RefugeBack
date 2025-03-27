@@ -20,8 +20,7 @@ public class Achat{
 	
 	public Achat() {}
 	
-	public Achat(Integer id, Integer qte, Double prix, LocalDate date) {
-		this.id = id;
+	public Achat(Integer qte, Double prix, LocalDate date) {
 		this.qte = qte;
 		this.prix = prix;
 		this.date = date;
